@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website Saya - Lanjutan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Website Saya</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="intro">
+      <h2>Hello Guys, Saya <span>Muzakir</span></h2>
+      <p>Pengembang web yang bersemangat.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya seorang pengembang web dengan bersemangat untuk membuat situs web yang indah dan fungsional. Dengan pengalaman dalam HTML, CSS, dan JavaScript, saya menikmati membangun proyek yang membantu memecahkan masalah dunia nyata.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Proyek Saya</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Project 1</h3>
+        <p>Deskripsi singkat tentang project pertama yang saya kerjakan, termasuk teknologi yang digunakan dan ada beberapa tantangan yang dihadapi.</p>
+        <a href="#" class="btn">Lihat Proyek</a>
+      </div>
+      <div class="project-item">
+        <h3>Project 2</h3>
+        <p>Deskripsi singkat tentang project kedua, berfokus pada fitur utama dan ada juga manfaat yang ditawarkan kepada pengguna untuk memudahkan para pengguna.</p>
+        <a href="#" class="btn">Lihat Proyek</a>
+      </div>
+      <div class="project-item">
+        <h3>Project 3</h3>
+        <p>Deskripsi proyek ketiga dengan penjelasan mengenai bagaimana project tersebut dapat membantu menyelesaikan masalah tertentu dengan detail sampai tuntas.</p>
+        <a href="#" class="btn">Lihat Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Layanan Saya</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <h3>Pengembangan Web</h3>
+        <p>Saya mengembangkan situs web yang responsif, cepat, dan menarik menggunakan HTML, CSS, JavaScript, dan framework modern.</p>
+      </div>
+      <div class="service-item">
+        <h3>UI/UX Design</h3>
+        <p>Saya merancang antarmuka pengguna yang intuitif dan menarik dengan fokus pada pengalaman pengguna yang optimal.</p>
+      </div>
+      <div class="service-item">
+        <h3>Optimasi SEO</h3>
+        <p>Saya juga menawarkan optimasi SEO untuk meningkatkan visibilitas situs web kamu di mesin pencari seperti Google.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>Testimoni Klien</h2>
+    <div class="testimonial-list">
+      <div class="testimonial-item">
+        <p>"MZKR Corp. membantu kami mengembangkan situs web dengan cepat dan hasilnya luar biasa! Sangat direkomendasikan!"</p>
+        <h4>- user 1 , CEO StartupX</h4>
+      </div>
+      <div class="testimonial-item">
+        <p>"Desain yang disediakan sangat profesional dan menarik. Proyek kami selesai tepat waktu dan sesuai harapan."</p>
+        <h4>- user 2 , Manajer Kreatif</h4>
+      </div>
+      <div class="testimonial-item">
+        <p>"Pengalaman yang luar biasa bekerja dengan Muzakir. Dia sangat responsif dan terbuka untuk masukan selama proses pengembangan."</p>
+        <h4>- user 3 , Pemilik Toko Online</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="formResponse"></div>
+  </section>
+
+  <footer>
+    <p>© 2024 MZKR Corp. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const responseDiv = document.getElementById('formResponse');
+
+      // Validasi sederhana
+      if (name === '' || email === '' || message === '') {
+        responseDiv.innerHTML = 'Semua kolom harus diisi!';
+        responseDiv.style.color = 'red';
+        return false; // Mencegah pengiriman form
+      }
+
+      // Simulasi pengiriman sukses
+      responseDiv.innerHTML = 'Pesan Anda telah terkirim!';
+      responseDiv.style.color = 'green';
+
+      // Reset form
+      document.getElementById('contactForm').reset();
+
+      return false; // Mencegah pengiriman form
+    }
+  </script>
+</body>
+</html>
